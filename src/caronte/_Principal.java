@@ -13,8 +13,7 @@ public class _Principal {
 		Scanner sc_Num = new Scanner(System.in);
 		Scanner sc_Str = new Scanner(System.in);
 
-		System.out.print("\033[H\033[2J");  
-		System.out.flush();
+		limparTela();
 
 		System.out.println("Caronte - O Barqueiro do Inferno");
 		System.out.println("================================");
@@ -35,7 +34,8 @@ public class _Principal {
 
 		menuOCaminho(caminho);
 
-
+		limparTela();
+		caminho05(moedas);
 
 	}
 	public static void limparTela() {
@@ -67,6 +67,13 @@ public class _Principal {
 			break;
 		}
 	}
+
+	public static void caminho05(int moedas) {
+
+		
+		System.out.println("Você chegou ao fim do jogo!");
+		System.out.println("Você conseguiu " + moedas + " moedas!");
 	}
+}
 	
 

@@ -1,10 +1,23 @@
 # O CARONTE
 
-## Roteiro
+### Roteiro
 
 
+---
 ## CAMINHO 01:
 
 
-		
-# SENAC_1SEM_PI
+---
+## CAMINHO 02:
+
+
+---
+## CAMINHO 03:
+
+
+---
+## CAMINHO 04:
+
+
+---
+## CAMINHO 05:
