@@ -8,7 +8,7 @@ public class _Principal {
 	
 	public static void main(String[] args) {
 
-		int caminho, moedas = 0;
+		int caminho, pontos = 0;
 
 		Scanner sc_Num = new Scanner(System.in);
 		Scanner sc_Str = new Scanner(System.in);
@@ -35,24 +35,26 @@ public class _Principal {
 		menuOCaminho(caminho);
 
 		limparTela();
-		caminho05(moedas);
+		caminho05(pontos);
 
 	}
+
 	public static void limparTela() {
-		System.out.print("\033[H\033[2J");  
+		System.out.print("\033[H\033[2J");
 		System.out.flush();
 	}
+
 	public static void menuOCaminho(int caminho) {
-		int moedas = 0;
+		int pontos = 0;
 	
 		switch (caminho) {
 		case 1:
 			Caminho01 caminho01 = new Caminho01();
-			moedas += caminho01.iniciar();
+			pontos += caminho01.iniciar();
 			break;
 		case 2:
 			Caminho02 caminho02 = new Caminho02();
-			moedas += caminho02.iniciar();
+			pontos += caminho02.iniciar();
 			break;
 		// case 3:
 		// 	Caminho03 caminho03 = new Caminho03();
@@ -68,11 +70,10 @@ public class _Principal {
 		}
 	}
 
-	public static void caminho05(int moedas) {
-
+	public static void caminho05(int pontos) {
 		
 		System.out.println("Você chegou ao fim do jogo!");
-		System.out.println("Você conseguiu " + moedas + " moedas!");
+		System.out.println("Você conseguiu " + pontos + " pontos!");
 	}
 }
 	
