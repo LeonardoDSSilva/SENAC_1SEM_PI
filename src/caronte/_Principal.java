@@ -7,6 +7,8 @@ public class _Principal {
 	
 	public static void main(String[] args) {
 		//sysout
+
+		// Test
 		int caminho, pontos = 0;
 		System.out.println("ll");
 		Scanner sc_Num = new Scanner(System.in);
