@@ -28,7 +28,7 @@ public class _Principal {
 		System.out.println("4 - Caminho 04");
 		System.out.println("5 - Sair");
 	
-		System.out.println("O caminho: ");
+		System.out.print("O caminho: ");
 		caminho = sc_Num.nextInt();
 
 		menuOCaminho(caminho);
