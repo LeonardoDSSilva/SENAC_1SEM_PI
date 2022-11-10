@@ -2,14 +2,13 @@ package caronte;
 
 import java.util.Scanner;
 
-import javax.script.ScriptContext;
 
 public class _Principal {
 	
 	public static void main(String[] args) {
 
 		int caminho, pontos = 0;
-
+		System.out.println("ll");
 		Scanner sc_Num = new Scanner(System.in);
 		Scanner sc_Str = new Scanner(System.in);
 
