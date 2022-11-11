@@ -12,11 +12,12 @@ public class _Principal {
 		// Test
 		int caminho, pontos = 0;
 		boolean continuar = true;
-		System.out.println("ll");
 		Scanner sc_Num = new Scanner(System.in);
 		Scanner sc_Str = new Scanner(System.in);
 
 		limparTela();
+
+		pausa(5);
 
 		System.out.println("Caronte - O Barqueiro do Inferno");
 		System.out.println("================================");
@@ -41,7 +42,7 @@ public class _Principal {
 			System.out.print("O caminho: ");
 			caminho = sc_Num.nextInt();
 
-			Thread.sleep(1500);
+			pausa(1);
 
 
 			// Array 
@@ -55,6 +56,10 @@ public class _Principal {
 	public static void limparTela() {
 		System.out.print("\033[H\033[2J");
 		System.out.flush();
+	}
+
+	public static void pausa(int tempo) throws Exception {
+		Thread.sleep(tempo * 1000);
 	}
 
 	public static void menuOCaminho(int caminho) throws InterruptedException {
