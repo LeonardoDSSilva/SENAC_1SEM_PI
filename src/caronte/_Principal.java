@@ -5,8 +5,10 @@ import java.util.Scanner;
 
 public class _Principal {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 		//sysout
+
+		// Test
 		int caminho, pontos = 0;
 		System.out.println("ll");
 		Scanner sc_Num = new Scanner(System.in);
@@ -31,7 +33,11 @@ public class _Principal {
 		System.out.print("O caminho: ");
 		caminho = sc_Num.nextInt();
 
-		menuOCaminho(caminho);
+		try {
+			menuOCaminho(caminho);
+		} catch (InterruptedException e) {
+				e.printStackTrace();
+		}
 
 		limparTela();
 		caminho05(pontos);
@@ -43,7 +49,7 @@ public class _Principal {
 		System.out.flush();
 	}
 
-	public static void menuOCaminho(int caminho) {
+	public static void menuOCaminho(int caminho) throws InterruptedException {
 		int pontos = 0;
 	
 		switch (caminho) {
