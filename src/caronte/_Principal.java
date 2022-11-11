@@ -10,6 +10,7 @@ public class _Principal {
 
 		// Test
 		int caminho, pontos = 0;
+		boolean continuar = true;
 		System.out.println("ll");
 		Scanner sc_Num = new Scanner(System.in);
 		Scanner sc_Str = new Scanner(System.in);
@@ -22,22 +23,27 @@ public class _Principal {
 		System.out.println("Seja bem-vindo ao jogo Caronte!");
 		System.out.println("Você está prestes a embarcar em uma jornada pelo Inferno.");
 
-
-		System.out.println("Escolha o caminho que deseja seguir:");
-		System.out.println("1 - Caminho 01");
-		System.out.println("2 - Caminho 02");
-		System.out.println("3 - Caminho 03");
-		System.out.println("4 - Caminho 04");
-		System.out.println("5 - Sair");
+		do {
+			System.out.println("Escolha o caminho que deseja seguir:");
+			System.out.println("1 - Caminho 01");
+			System.out.println("2 - Caminho 02");
+			System.out.println("3 - Caminho 03");
+			System.out.println("4 - Caminho 04");
+			System.out.println("5 - Sair");
+		
+			System.out.println("O caminho: ");
+			caminho = sc_Num.nextInt();
 	
-		System.out.println("O caminho: ");
-		caminho = sc_Num.nextInt();
+			menuOCaminho(caminho);
+	
+			limparTela();
 
-		menuOCaminho(caminho);
-
-		limparTela();
-		caminho05(pontos);
-
+			// Array 
+			
+		} while (continuar);
+		
+			limparTela();
+			caminho05(pontos);
 	}
 
 	public static void limparTela() {
