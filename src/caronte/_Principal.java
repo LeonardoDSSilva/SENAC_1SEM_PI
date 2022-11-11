@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class _Principal {
 	
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		//sysout
 
 		// Test
@@ -42,7 +42,7 @@ public class _Principal {
 			System.out.print("O caminho: ");
 			caminho = sc_Num.nextInt();
 
-			pausa(1);
+			pausa(2);
 
 
 			// Array 
@@ -58,11 +58,16 @@ public class _Principal {
 		System.out.flush();
 	}
 
-	public static void pausa(int tempo) throws Exception {
-		Thread.sleep(tempo * 1000);
+	public static void pausa(int tempo) {
+		try {
+			Thread.sleep(tempo * 1000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
 	}
 
-	public static void menuOCaminho(int caminho) throws InterruptedException {
+	public static void menuOCaminho(int caminho) {
 		int pontos = 0;
 	
 		switch (caminho) {
