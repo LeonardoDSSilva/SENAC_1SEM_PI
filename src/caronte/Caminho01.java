@@ -1,12 +1,41 @@
 package caronte;
+import caronte._Principal;
+import java.util.Scanner;
 
 public class Caminho01 {
 
 	public int iniciar() {
+		
+		_Principal.limparTela();
+		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Seja bem-vindo ao Caminho 01!");
+		String escolha= "";
+
+		System.out.println("Ao navegar pelo caminho voce encontra um jovem rapaz");
+		System.out.println("Ajudar o rapaz? [S/SN");
 		System.out.println("================================");
-		System.out.println("O objetivo deste caminho é chegar ao fim com a maior quantidade de pontos possíveis.");
+		escolha = sc.nextLine();
+
+		if(escolha.toUpperCase().equals("S")){
+			System.out.println("teste");
+			
+		
+		
+		
+		
+		
+		}else if(escolha.toUpperCase().equals("N")){
+			System.out.println("Voce ignora o homem pedindo ajuda, e segue sua navegacao");
+			System.out.println(". \n. \n. \n");
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				
+				e.printStackTrace();
+			}
+		}
+		
+
 		
 
 		System.out.println();
@@ -14,5 +43,6 @@ public class Caminho01 {
 		return 0;
 	}
 
+	
 	
 }

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class _Principal {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		//sysout
 
 		// Test
@@ -37,6 +37,11 @@ public class _Principal {
 			menuOCaminho(caminho);
 	
 			limparTela();
+			System.out.print("O caminho: ");
+			caminho = sc_Num.nextInt();
+
+			Thread.sleep(1500);
+
 
 			// Array 
 			
@@ -51,7 +56,7 @@ public class _Principal {
 		System.out.flush();
 	}
 
-	public static void menuOCaminho(int caminho) {
+	public static void menuOCaminho(int caminho) throws InterruptedException {
 		int pontos = 0;
 	
 		switch (caminho) {
