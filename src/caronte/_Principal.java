@@ -6,11 +6,12 @@ import java.util.Scanner;
 
 public class _Principal {
 	
-	public static void main(String[] args)  {
+	public static void main(String[] args) throws Exception {
 		//sysout
 
 		// Test
 		int caminho, pontos = 0;
+		boolean continuar = true;
 		System.out.println("ll");
 		Scanner sc_Num = new Scanner(System.in);
 		Scanner sc_Str = new Scanner(System.in);
@@ -23,26 +24,32 @@ public class _Principal {
 		System.out.println("Seja bem-vindo ao jogo Caronte!");
 		System.out.println("Você está prestes a embarcar em uma jornada pelo Inferno.");
 
-
-		System.out.println("Escolha o caminho que deseja seguir:");
-		System.out.println("1 - Caminho 01");
-		System.out.println("2 - Caminho 02");
-		System.out.println("3 - Caminho 03");
-		System.out.println("4 - Caminho 04");
-		System.out.println("5 - Sair");
+		do {
+			System.out.println("Escolha o caminho que deseja seguir:");
+			System.out.println("1 - Caminho 01");
+			System.out.println("2 - Caminho 02");
+			System.out.println("3 - Caminho 03");
+			System.out.println("4 - Caminho 04");
+			System.out.println("5 - Sair");
+		
+			System.out.println("O caminho: ");
+			caminho = sc_Num.nextInt();
 	
-		System.out.print("O caminho: ");
-		caminho = sc_Num.nextInt();
-
-		try {
 			menuOCaminho(caminho);
-		} catch (InterruptedException e) {
-				e.printStackTrace();
-		}
+	
+			limparTela();
+			System.out.print("O caminho: ");
+			caminho = sc_Num.nextInt();
 
-		limparTela();
-		caminho05(pontos);
+			Thread.sleep(1500);
 
+
+			// Array 
+			
+		} while (continuar);
+		
+			limparTela();
+			caminho05(pontos);
 	}
 
 	public static void limparTela() {
