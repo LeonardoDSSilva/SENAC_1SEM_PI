@@ -17,7 +17,7 @@ public class _Principal {
 
 		limparTela();
 
-		pausa(5);
+		temporizador(5);
 
 		System.out.println("Caronte - O Barqueiro do Inferno");
 		System.out.println("================================");
@@ -27,6 +27,8 @@ public class _Principal {
 
 		do {
 			System.out.println("Escolha o caminho que deseja seguir:");
+
+			
 			System.out.println("1 - Caminho 01");
 			System.out.println("2 - Caminho 02");
 			System.out.println("3 - Caminho 03");
@@ -35,17 +37,18 @@ public class _Principal {
 		
 			System.out.println("O caminho: ");
 			caminho = sc_Num.nextInt();
-	
+			
 			menuOCaminho(caminho);
-	
+			
 			limparTela();
 			System.out.print("O caminho: ");
 			caminho = sc_Num.nextInt();
-
-			pausa(2);
-
-
+			
+			temporizador(2);
+			
 			// Array 
+
+			// Criar uma condição para sair do loop
 			
 		} while (continuar);
 		
@@ -58,9 +61,9 @@ public class _Principal {
 		System.out.flush();
 	}
 
-	public static void pausa(int tempo) {
+	public static void temporizador(int tempoEmSegundos) {
 		try {
-			Thread.sleep(tempo * 1000);
+			Thread.sleep(tempoEmSegundos * 1000);
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
