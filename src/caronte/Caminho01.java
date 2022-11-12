@@ -27,7 +27,7 @@ public class Caminho01 {
 		}else if(escolha.toUpperCase().equals("N")){
 			System.out.println("Voce ignora o homem pedindo ajuda, e segue sua navegacao");
 			System.out.println(". \n. \n. \n");
-			_Principal.pausa(3);
+			_Principal.temporizador(3);
 		}
 		
 
