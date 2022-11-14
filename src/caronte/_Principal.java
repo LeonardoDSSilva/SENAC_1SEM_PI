@@ -2,14 +2,10 @@ package caronte;
 
 import java.util.Scanner;
 
-
-
 public class _Principal {
 	
 	public static void main(String[] args) {
-		//sysout
 
-		// Test
 		boolean continuar = true;
 		Scanner sc_Num = new Scanner(System.in);
 		Scanner sc_Str = new Scanner(System.in);
@@ -22,17 +18,20 @@ public class _Principal {
 		System.out.println("================================");
 
 		System.out.println("Seja bem-vindo ao jogo Caronte!");
+
 		System.out.println("Você está prestes a embarcar em uma jornada pelo Inferno.");
 
-		boolean caminhoValido = false;
 		int caminho = 0, pontos = 0;
 		int[] caminhos = new int[4];
 		int i = 0;
-
+		
 		do {
+			boolean caminhoValido = false;
+			temporizador(3);
 			limparTela();
+			
 			System.out.println("Escolha o caminho que deseja seguir:");
-
+			
 			int cont = 1;
 			for (int j = 0; j < caminhos.length ; j++) {
 				if (cont == caminhos[j]) {
@@ -44,16 +43,14 @@ public class _Principal {
 				cont ++;
 			}
 			
-			temporizador(2);
-
 			System.out.println("O caminho: ");
 			caminho = sc_Num.nextInt();
-
-			if (i == 5){
+			
+			if (i > 4){
+				System.out.println("Você já escolheu todos os caminhos!");
 				caminho = 5;
 			}
 			else if (caminho > 0 && caminho < 5) {
-
 				for (int index = 0; index < i; index++) {
 					if (caminho == caminhos[index]) {
 						caminhoValido = true;
@@ -62,19 +59,25 @@ public class _Principal {
 				if (!caminhoValido) {
 					caminhos[i] = caminho;
 					i++;
-					menuOCaminho(caminho);
+					pontos += menuOCaminho(caminho);
 				}
 				else{
-					// Exibir todos os caminhos já escolhidos
 					System.out.println("Escolha outro caminho");
 				}
 			}
-			// Criar uma condição para sair do loop
+			else if (caminho == 5) {
+				System.out.println("Saindo...");
+				continuar = false;
+			}
+			else if (caminho > 5 || caminho <= 0){
+				System.out.println("Escolha um caminho válido");
+			}
+
 		} while (caminho != 5);
 		
-		System.out.println("Escolha out4o caminho");
-		// 	limparTela();
-		// 	caminho05(pontos);
+		System.out.println(" ");
+		limparTela();
+		caminho05(pontos);
 	}
 
 	public static void limparTela() {
@@ -90,9 +93,8 @@ public class _Principal {
 		}
 	}
 
-	public static void menuOCaminho(int caminho) {
+	public static int menuOCaminho(int caminho) {
 		int pontos = 0;
-	
 		switch (caminho) {
 		case 1:
 			Caminho01 caminho01 = new Caminho01();
@@ -102,18 +104,19 @@ public class _Principal {
 			Caminho02 caminho02 = new Caminho02();
 			pontos += caminho02.iniciar();
 			break;
-		// case 3:
-		// 	Caminho03 caminho03 = new Caminho03();
-		// 	caminho03.iniciar();
-		// 	break;
-		// case 4:
-		// 	Caminho04 caminho04 = new Caminho04();
-		// 	caminho04.iniciar();
-		// 	break;
+		case 3:
+			Caminho03 caminho03 = new Caminho03();
+			pontos += caminho03.iniciar();
+			break;
+		case 4:
+			Caminho04 caminho04 = new Caminho04();
+			pontos += caminho04.iniciar();
+			break;
 		default:
 			System.out.println("Saindo...");
 			break;
 		}
+		return pontos;
 	}
 
 	public static void caminho05(int pontos) {
@@ -121,5 +124,3 @@ public class _Principal {
 		System.out.println("Você conseguiu " + pontos + " pontos!");
 	}
 }
-	
-
