@@ -6,19 +6,17 @@ import caronte._Principal;
 
 public class Caminho02 {
 	public int iniciar() {
+        _Principal.limparTela();
 
 
 		System.out.println("Seja bem-vindo ao Caminho 02!");
 		System.out.println("O caminho 02 é o caminho da Predra.");
 		System.out.println("As regras do mundo que você vivia não existem mais.");
+
+        _Principal.temporizador(3);
+        _Principal.limparTela();
 		int pontos = jogo();
 
-
-		
-		
-		
-		
-		
 		return 0;
 	}
 	private static int jogo() {
@@ -32,8 +30,7 @@ public class Caminho02 {
         System.out.println("3 - Tesoura");
         int usuario = iScanner.nextInt();
 
-        System.out.print("\033[H\033[2J");  
-        System.out.flush();
+        _Principal.limparTela();
 
         escolha(usuario, "Você");
         

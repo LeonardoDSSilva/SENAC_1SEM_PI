@@ -6,12 +6,9 @@ public class _Principal {
 	
 	public static void main(String[] args) {
 
-		boolean continuar = true;
 		Scanner sc_Num = new Scanner(System.in);
-		Scanner sc_Str = new Scanner(System.in);
 
 		limparTela();
-
 		temporizador(1);
 
 		System.out.println("Caronte - O Barqueiro do Inferno");
@@ -43,7 +40,7 @@ public class _Principal {
 				cont ++;
 			}
 			
-			System.out.println("O caminho: ");
+			System.out.print("O caminho: ");
 			caminho = sc_Num.nextInt();
 			
 			if (i > 4){
@@ -67,7 +64,6 @@ public class _Principal {
 			}
 			else if (caminho == 5) {
 				System.out.println("Saindo...");
-				continuar = false;
 			}
 			else if (caminho > 5 || caminho <= 0){
 				System.out.println("Escolha um caminho válido");
