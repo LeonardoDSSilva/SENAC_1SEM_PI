@@ -9,15 +9,18 @@ public class _Principal {
 		Scanner sc_Num = new Scanner(System.in);
 
 		limparTela();
-		temporizador(1);
-
+		temporizador(3);
+		
 		System.out.println("\u001B[31mCaronte - O Barqueiro do Inferno\u001B[0m");
 		System.out.println("================================");
-
+		
 		System.out.println("Seja bem-vindo ao jogo Caronte!");
-
+		
 		System.out.println("Você está prestes a embarcar em uma jornada pelo Inferno.");
-
+		
+		temporizador(3);
+		limparTela();
+		
 		int caminho = 0, pontos = 0;
 		int[] caminhos = new int[4];
 		int i = 0;
@@ -83,7 +86,12 @@ public class _Principal {
 
 	public static void temporizador(int tempoEmSegundos) {
 		try {
-			Thread.sleep(tempoEmSegundos * 1000);
+			for (int i = 0; i < tempoEmSegundos; i++) {
+				System.out.print("\u001B[36m . ");
+				Thread.sleep(1000);
+			}
+			System.out.println("\u001B[0m");
+			limparTela();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
