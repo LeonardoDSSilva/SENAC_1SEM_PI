@@ -7,17 +7,20 @@ public class _Principal {
 	public static void main(String[] args) {
 
 		Scanner sc_Num = new Scanner(System.in);
-
+		Scanner enter = new Scanner(System.in);
+		String temp = " ";
 		limparTela();
 		temporizador(1);
+		System.out.println("============================================================================================================================");
+		System.out.println("============================================:          CARONTE             :================================================");
+		System.out.println("============================================================================================================================");
 
-		System.out.println("Caronte - O Barqueiro do Inferno");
-		System.out.println("================================");
+		System.out.println("	Na mitologia grega, Caronte é o barqueiro de Hades, que carrega as almas dos recém-mortos sobre as águas do rio Estige e Aqueronte, que dividiam o mundo dos vivos do mundo dos mortos.\nEra necessario uma moeda para pagar pela viagem de transicao, moeda esta que era colocada dentro ou sobre a boca dos mortos.\nAqueles que nao possuiam condicoes para pagar a quantia eram destinados a vagar pelos rios pela eternidade...\n");
 
-		System.out.println("Seja bem-vindo ao jogo Caronte!");
-
-		System.out.println("Você está prestes a embarcar em uma jornada pelo Inferno.");
-
+		System.out.println("	Você é o Caronte... Voce ira demonstrar misericordia, ou ira cumprir sua missao?");
+		System.out.println("#################################################################################################################################################\n");
+		System.out.println("\nAperte qualquer coisa e de enter para continuar...");
+		temp = enter.nextLine();
 		int caminho = 0, pontos = 0;
 		int[] caminhos = new int[4];
 		int i = 0;
