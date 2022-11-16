@@ -11,7 +11,7 @@ public class _Principal {
 		limparTela();
 		temporizador(1);
 
-		System.out.println("Caronte - O Barqueiro do Inferno");
+		System.out.println("\u001B[31mCaronte - O Barqueiro do Inferno\u001B[0m");
 		System.out.println("================================");
 
 		System.out.println("Seja bem-vindo ao jogo Caronte!");
@@ -32,7 +32,7 @@ public class _Principal {
 			int cont = 1;
 			for (int j = 0; j < caminhos.length ; j++) {
 				if (cont == caminhos[j]) {
-					System.out.println(" " + cont  + " - já foi escolhido");
+					System.out.println("\u001B[31m " + cont  + " - já foi escolhido\u001B[0m");
 				}
 				else{
 					System.out.println(" " + cont + " - disponível");

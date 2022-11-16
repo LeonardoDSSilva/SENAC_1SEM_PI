@@ -2,7 +2,6 @@ package caronte;
 
 import java.util.Scanner;
 
-import caronte._Principal;
 
 public class Menu {
 
