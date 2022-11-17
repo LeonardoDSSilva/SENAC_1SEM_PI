@@ -15,7 +15,7 @@ public class Caminho03 {
 		int escolhaM = 0;
 		int jogo = 5;
 		int moeda = 0;
-		String[] ParImpar = {"par", "impar"};
+		
 		Random rand = new Random();
 		int jogadaPC =0;
 		int jogadaPL=0;

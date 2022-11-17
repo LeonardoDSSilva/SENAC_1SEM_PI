@@ -20,6 +20,8 @@ public class Menu {
 		int i = 0;
 
 		do {
+			
+
 			System.out.println("Escolha o caminho que deseja seguir:");
 	
 				
