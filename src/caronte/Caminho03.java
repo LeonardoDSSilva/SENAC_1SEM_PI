@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class Caminho03 {
 
 	public int iniciar() {
+
+		_Principal.limparTela();
 		//JOGO DE PAR OU IMPAR
 		_Principal.limparTela();
 		boolean loop = true;

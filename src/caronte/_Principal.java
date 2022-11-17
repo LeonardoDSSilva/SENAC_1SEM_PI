@@ -12,14 +12,14 @@ public class _Principal {
 		limparTela();
 		_Principal.temporizador(1, false);
 		System.out.println("============================================================================================================================");
-		System.out.println("============================================:          CARONTE             :================================================");
+		System.out.println("============================================:\u001B[31m          CARONTE\u001B[0m             :================================================");
 		System.out.println("============================================================================================================================");
 
 		System.out.println("	Na mitologia grega, Caronte é o barqueiro de Hades, que carrega as almas dos recém-mortos sobre as águas do rio Estige e Aqueronte, que dividiam o mundo dos vivos do mundo dos mortos.\nEra necessario uma moeda para pagar pela viagem de transicao, moeda esta que era colocada dentro ou sobre a boca dos mortos.\nAqueles que nao possuiam condicoes para pagar a quantia eram destinados a vagar pelos rios pela eternidade...\n");
 
 		System.out.println("	Você é o Caronte... Voce ira demonstrar misericordia, ou ira cumprir sua missao?");
 		System.out.println("#################################################################################################################################################\n");
-		System.out.println("\nAperte qualquer coisa e de enter para continuar...");
+		System.out.println("\u001B[35m\nAperte qualquer coisa e de enter para continuar...\u001B[0m");
 		temp = enter.nextLine();
 		int caminho = 0, pontos = 0;
 		int[] caminhos = new int[4];
