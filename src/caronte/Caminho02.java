@@ -12,16 +12,16 @@ public class Caminho02 {
 
 
 		System.out.println("\u001B[31mSeja bem-vindo ao Caminho 02!\u001B[0m");
-        _Principal.temporizador(2);
+        _Principal.temporizador(2, true);
         
 		System.out.println("O caminho 02 é o caminho da Predra.");
-        _Principal.temporizador(2);
+        _Principal.temporizador(2, true);
         _Principal.limparTela();
         
 		System.out.println("\u001B[35mAs regras do mundo que você vivia não existem mais.");
         System.out.println("Você está em um mundo onde a magia é real.\u001B[0m");
 
-        _Principal.temporizador(4);
+        _Principal.temporizador(4, true);
         _Principal.limparTela();
 
         System.out.println("[1] - O primeiro modo é um caminho sem volta.");
@@ -31,7 +31,7 @@ public class Caminho02 {
         System.out.print("Escolha o modo que você deseja seguir: ");
         int modo = iScanner.nextInt();
 
-        _Principal.temporizador(3);
+        _Principal.temporizador(3, true);
         _Principal.limparTela();
 
         switch (modo){

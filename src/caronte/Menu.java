@@ -13,7 +13,7 @@ public class Menu {
 		
 		
 		_Principal.limparTela();
-		_Principal.temporizador(5);
+		_Principal.temporizador(5, true);
 		
 		int caminho, pontos = 0;
 		int[] caminhos = new int[4];
@@ -30,7 +30,7 @@ public class Menu {
 
 			System.out.println("5 - Sair");
 			
-			_Principal.temporizador(2);
+			_Principal.temporizador(2, true);
 			
 			boolean caminhoValido = false;
 			
