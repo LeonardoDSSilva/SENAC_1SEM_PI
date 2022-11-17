@@ -13,7 +13,7 @@ public class Caminho03 {
 		Scanner lenin = new Scanner(System.in);
 		Boolean jogo2 = false;
 		int escolhaM = 0;
-		int jogo = 0;
+		int jogo = 5;
 		int moeda = 0;
 		String[] ParImpar = {"par", "impar"};
 		Random rand = new Random();
@@ -60,7 +60,7 @@ public class Caminho03 {
 			loop = false;
 			}
 
-		if (jogo2 = true) {
+		if (jogo2 == true) {
 			System.out.println("Te darei uma chance. Me desafie para um jogo, se voce ganhar, te darei a moeda necessaria para a viagem. Mas voce só tera uma chance.");
 			System.out.println("MULHER: Obrigada! Obrigada!");
 			System.out.println(" -'A mulher pensa com seus botoes'- ");
