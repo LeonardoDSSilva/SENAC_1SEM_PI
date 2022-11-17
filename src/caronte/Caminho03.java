@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Caminho03 {
 
 	public int iniciar() {
+
+		_Principal.limparTela();
 		//JOGO DE PAR OU IMPAR
 		Scanner lenin = new Scanner(System.in);
 		Boolean margin = false;

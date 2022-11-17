@@ -56,9 +56,9 @@ public class Caminho02 {
         Scanner iScanner = new Scanner(System.in);
 
         System.out.println("Escolhe");
-        System.out.println("1 - Pedra");
-        System.out.println("2 - Papel");
-        System.out.println("3 - Tesoura");
+        System.out.println("[1] - Pedra");
+        System.out.println("[2] - Papel");
+        System.out.println("[3] - Tesoura");
         int usuario = iScanner.nextInt();
 
         _Principal.limparTela();
@@ -88,7 +88,7 @@ public class Caminho02 {
                 ponto = -1;
             }
         }
-        return ponto;
+        return 0;
     }
 
     private static void escolha(int computador, String usuario) {
