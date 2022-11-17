@@ -77,7 +77,6 @@ public class _Principal {
 			else if (caminho > 4 || caminho <= 0){
 				System.out.println("Escolha um caminho válido");
 			}
-
 		} while (caminho != 4);
 		
 		System.out.println(" ");
@@ -134,5 +133,10 @@ public class _Principal {
 	public static void caminho05(int pontos) {
 		System.out.println("Você chegou ao fim do jogo!");
 		System.out.println("Você conseguiu " + pontos + " moedas!");
+	}
+
+	public static void escrevartela(){
+
+
 	}
 }
