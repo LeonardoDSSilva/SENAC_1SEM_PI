@@ -14,7 +14,7 @@ public class Caminho02 {
 		System.out.println("\u001B[31mSeja bem-vindo ao Caminho 02!\u001B[0m");
         _Principal.temporizador(2, true);
         
-		System.out.println("O caminho 02 é o caminho da Predra.");
+		System.out.println("O caminho 02 é o caminho da Pedra.");
         _Principal.temporizador(2, true);
         _Principal.limparTela();
         
