@@ -37,7 +37,7 @@ public class _Principal {
 			else {
 				System.out.println("Escolha o caminho que deseja seguir:");
 				
-				for (int j = 1; j <= 4 ; j++) {
+				for (int j = 1; j <= 3 ; j++) {
 					for (int k = 0; k < caminhos.length; k++) {
 						if (caminhos[k] == j) {
 							existe = true;
