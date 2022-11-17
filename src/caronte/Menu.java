@@ -23,10 +23,10 @@ public class Menu {
 			System.out.println("Escolha o caminho que deseja seguir:");
 	
 				
-			System.out.println("1 - Caminho 01");
-			System.out.println("2 - Caminho 02");
-			System.out.println("3 - Caminho 03");
-			System.out.println("4 - Caminho 04");
+			System.out.println("[1] - Caminho 01");
+			System.out.println("[2] - Caminho 02");
+			System.out.println("[3] - Caminho 03");
+			
 
 			System.out.println("5 - Sair");
 			
