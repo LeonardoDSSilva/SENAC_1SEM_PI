@@ -24,33 +24,39 @@ public class _Principal {
 		int caminho = 0, pontos = 0;
 		int[] caminhos = new int[4];
 		int i = 0;
+		boolean existe = false;
 		
 		do {
 			boolean caminhoValido = false;
-			temporizador(3);
-			limparTela();
+			temporizador(3, true);
 			
-			System.out.println("Escolha o caminho que deseja seguir:");
-			
-			int cont = 1;
-			for (int j = 0; j < caminhos.length ; j++) {
-				if (cont == caminhos[j]) {
-					System.out.println(" " + cont  + " - já foi escolhido");
-				}
-				else{
-					System.out.println(" " + cont + " - disponível");
-				}
-				cont ++;
-			}
-			
-			System.out.print("O caminho: ");
-			caminho = sc_Num.nextInt();
-			
-			if (i > 4){
+			if (i == 4){
 				System.out.println("Você já escolheu todos os caminhos!");
 				caminho = 5;
 			}
-			else if (caminho > 0 && caminho < 5) {
+			else {
+				System.out.println("Escolha o caminho que deseja seguir:");
+				
+				for (int j = 1; j <= 4 ; j++) {
+					for (int k = 0; k < caminhos.length; k++) {
+						if (caminhos[k] == j) {
+							existe = true;
+						}
+					}
+					if (existe) {
+						System.out.println("\u001B[31m " + j  + " - já foi escolhido\u001B[0m");
+					}
+					else{
+						System.out.println(" " + j + " - disponível");
+					}
+					existe = false;
+				}
+				
+				System.out.print("O caminho: ");
+				caminho = sc_Num.nextInt();
+			}
+			
+			if (caminho > 0 && caminho < 5) {
 				for (int index = 0; index < i; index++) {
 					if (caminho == caminhos[index]) {
 						caminhoValido = true;
@@ -84,9 +90,16 @@ public class _Principal {
 		System.out.flush();
 	}
 
-	public static void temporizador(int tempoEmSegundos) {
+	public static void temporizador(int tempoEmSegundos, boolean limpar) {
 		try {
-			Thread.sleep(tempoEmSegundos * 1000);
+			for (int i = 0; i < tempoEmSegundos; i++) {
+				System.out.print("\u001B[36m . ");
+				Thread.sleep(1000);
+			}
+			System.out.println("\u001B[0m");
+			if (limpar) {
+				limparTela();
+			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

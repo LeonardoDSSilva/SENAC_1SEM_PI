@@ -25,9 +25,7 @@ public class Caminho01 {
 			System.out.println("VOCE: As regras do meu oficio são claras, tenho que ser justo com todos os que vem aqui.");
 			System.out.println("HOMEM: Nao ha nenhuma forma?");
 			System.out.println(" -'VOCE PENSA NAS POSSIBILIDADES'- ");
-				for (int i = 0; i < 3; i++) {
-					System.out.print(" . ");
-					_Principal.temporizador(1);}
+			_Principal.temporizador(3, false);
 			
 			
 			System.out.println("\n[1] - Ignorar o homem e seguir sua viagem.");
@@ -35,13 +33,10 @@ public class Caminho01 {
 				subEscolha = lolo.nextInt();
 				switch (subEscolha) {
 					case 1:
-					System.out.println("Voce ignora o homem pedindo ajuda, e segue sua navegacao");
-					System.out.println(" -'Ao fundo voce escuta o choro do homem'- ");
-					loop = false;
-					for (int i = 0; i < 3; i++) {
-						System.out.print(" . ");
-						_Principal.temporizador(1);
-					}
+						System.out.println("Voce ignora o homem pedindo ajuda, e segue sua navegacao");
+						System.out.println(" -'Ao fundo voce escuta o choro do homem'- ");
+						loop = false;
+						_Principal.temporizador(3, false);
 						escolha = 2;
 						loop = false;
 						break;
@@ -58,10 +53,7 @@ public class Caminho01 {
 			System.out.println("Voce ignora o homem pedindo ajuda, e segue sua navegacao");
 			System.out.println(" -'Ao fundo voce escuta o choro do homem'- ");
 			loop = false;
-			for (int i = 0; i < 3; i++) {
-				System.out.print(" . ");
-				_Principal.temporizador(1);
-			}
+			_Principal.temporizador(3, true);
 			}else if(escolha > 2){
 				System.out.println("escolha invalida!");
 				break;
@@ -69,15 +61,11 @@ public class Caminho01 {
 		
 			if(charada){
 					int resposta = 0;
-					_Principal.limparTela();
 					System.out.println("VOCE: Te darei uma unica chance... Se voce ganhar de mim em um jogo, eu te darei uma moeda.");
 					System.out.println("HOMEM: Obrigado, muito obrigado!");
 					System.out.println("VOCE: Tens uma chance apenas...");
 					System.out.println("O homem comeca a pensar");
-							for (int i = 0; i < 3; i++) {
-								System.out.println(" . ");
-								_Principal.temporizador(1);
-							}
+					_Principal.temporizador(3, false);
 
 					System.out.println("O homem finalmente lhe diz: \nTenho uma charada para voce! Se voce acertar, voce ganhou. Caso erre, voce me da uma moeda!");
 					System.out.println("\nÉ mais poderoso que os deuses, mais maligno que os demônios. É algo que os pobres tem e os ricos precisam. Se você comê-lo, você morre. O que é isto?\n");	
@@ -90,7 +78,7 @@ public class Caminho01 {
 								System.out.println(" -'Voce escuta o homem agradecendo enquanto voce guia seu barco de volta'- ");
 								for (int i = 0; i < 3; i++) {
 									System.out.println(" . ");
-									_Principal.temporizador(1);
+									_Principal.temporizador(1, false);
 								}
 								loop = false;
 								break;
@@ -98,11 +86,10 @@ public class Caminho01 {
 								System.out.println("HOMEM: Voce... Voce acertou...");
 								System.out.println("VOCE: Sim... Adeus.");
 								System.out.println(" -'Voce escuta o homem chorando cada vez mais baixo...'- ");
-								for (int i = 0; i < 3; i++) {
-									System.out.print(" . ");
-									_Principal.temporizador(1);
-								}
+
+								_Principal.temporizador(3, false);
 								loop = false;
+
 								break;
 							}
 
