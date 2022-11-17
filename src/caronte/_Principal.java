@@ -22,7 +22,7 @@ public class _Principal {
 		System.out.println("\u001B[35m\nAperte qualquer coisa e de enter para continuar...\u001B[0m");
 		temp = enter.nextLine();
 		int caminho = 0, pontos = 0;
-		int[] caminhos = new int[4];
+		int[] caminhos = new int[3];
 		int i = 0;
 		boolean existe = false;
 		
@@ -56,7 +56,7 @@ public class _Principal {
 				caminho = sc_Num.nextInt();
 			}
 			
-			if (caminho > 0 && caminho < 5) {
+			if (caminho > 0 && caminho < 4) {
 				for (int index = 0; index < i; index++) {
 					if (caminho == caminhos[index]) {
 						caminhoValido = true;
@@ -71,14 +71,14 @@ public class _Principal {
 					System.out.println("Escolha outro caminho");
 				}
 			}
-			else if (caminho == 5) {
+			else if (caminho == 4) {
 				System.out.println("Saindo...");
 			}
-			else if (caminho > 5 || caminho <= 0){
+			else if (caminho > 4 || caminho <= 0){
 				System.out.println("Escolha um caminho válido");
 			}
 
-		} while (caminho != 5);
+		} while (caminho != 4);
 		
 		System.out.println(" ");
 		limparTela();
@@ -120,10 +120,10 @@ public class _Principal {
 			Caminho03 caminho03 = new Caminho03();
 			pontos += caminho03.iniciar();
 			break;
-		case 4:
-			Caminho04 caminho04 = new Caminho04();
-			pontos += caminho04.iniciar();
-			break;
+		// case 4:
+		// 	Caminho04 caminho04 = new Caminho04();
+		// 	pontos += caminho04.iniciar();
+		// 	break;
 		default:
 			System.out.println("Saindo...");
 			break;
@@ -133,6 +133,6 @@ public class _Principal {
 
 	public static void caminho05(int pontos) {
 		System.out.println("Você chegou ao fim do jogo!");
-		System.out.println("Você conseguiu " + pontos + " pontos!");
+		System.out.println("Você conseguiu " + pontos + " moedas!");
 	}
 }

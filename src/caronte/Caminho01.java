@@ -11,6 +11,7 @@ public class Caminho01 {
 		Scanner lolo = new Scanner(System.in);
 		int escolha = 0;
 		int subEscolha =0;
+		int moeda = 0;
 		boolean charada = false;
 		boolean loop = true;
 		do{
@@ -74,7 +75,7 @@ public class Caminho01 {
 							if(resposta > 1){
 								System.out.println("HOMEM: Voce errou! Isso quer dizer, quer dizer ...");
 								System.out.println("VOCE: Sim... tome, voce mereceu.");
-								//moeda+1
+								moeda = 1;
 								System.out.println(" -'Voce escuta o homem agradecendo enquanto voce guia seu barco de volta'- ");
 								for (int i = 0; i < 3; i++) {
 									System.out.println(" . ");
@@ -100,7 +101,7 @@ public class Caminho01 {
 
 		System.out.println();
 
-		return 0;
+		return moeda;
 	}
 
 	

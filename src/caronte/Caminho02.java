@@ -72,23 +72,23 @@ public class Caminho02 {
             
             System.out.println();
             if (usuario == computador) {
-                System.out.println("Empate");
+                // System.out.println("Empate");
                 ponto = 0;
             } else if (usuario == 1 && computador == 3) {
-                System.out.println("Você ganhou");
+                // System.out.println("Você ganhou");
                 ponto = 1;
             } else if (usuario == 2 && computador == 1) {
-                System.out.println("Você ganhou");
+                // System.out.println("Você ganhou");
                 ponto = 1;
             } else if (usuario == 3 && computador == 2) {
-                System.out.println("Você ganhou");
+                // System.out.println("Você ganhou");
                 ponto = 1;
             } else {
-                System.out.println("Você perdeu");
-                ponto = -1;
+                // System.out.println("Você perdeu");
+                // ponto = -1;
             }
         }
-        return 0;
+        return ponto;
     }
 
     private static void escolha(int computador, String usuario) {

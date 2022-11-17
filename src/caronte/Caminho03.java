@@ -7,7 +7,6 @@ public class Caminho03 {
 
 	public int iniciar() {
 
-		_Principal.limparTela();
 		//JOGO DE PAR OU IMPAR
 		_Principal.limparTela();
 		boolean loop = true;
@@ -15,6 +14,7 @@ public class Caminho03 {
 		Boolean jogo2 = false;
 		int escolhaM = 0;
 		int jogo = 0;
+		int moeda = 0;
 		String[] ParImpar = {"par", "impar"};
 		Random rand = new Random();
 		int jogadaPC =0;
@@ -92,7 +92,6 @@ public class Caminho03 {
 				
 			}
 		}
-		
 			if(vitoria){
 				System.out.println("Tenho que me despedir... Adeus...");
 				System.out.println("NAO POR FAVOR!!!");
@@ -107,16 +106,12 @@ public class Caminho03 {
 				loop = false;
 				System.out.println("E voce retorna com o seu barco para o seu caminho...");
 				_Principal.temporizador(5, false);
+				
+				moeda = 1;
 				break;
-			
 			}
 		}while(loop);
-
-
-
-
-
-		return 0;
+		return moeda;
 	}
 	
 }
