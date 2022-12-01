@@ -43,9 +43,10 @@ public class _Principal {
       boolean caminhoValido = false;
       temporizador(3, true);
 
-      if (i == 4) {
+      if (i == 3) {
         System.out.println("Você já escolheu todos os caminhos!");
-        caminho = 5;
+        temporizador(4, true);
+        caminho = 4;
       } else {
         System.out.println("Escolha o caminho que deseja seguir:");
 
@@ -90,8 +91,7 @@ public class _Principal {
     } while (caminho != 4);
 
     System.out.println(" ");
-    limparTela();
-    caminho05(pontos);
+    caminho04(pontos);
   }
 
   public static void limparTela() {
@@ -129,10 +129,6 @@ public class _Principal {
         Caminho03 caminho03 = new Caminho03();
         pontos += caminho03.iniciar();
         break;
-      // case 4:
-      // 	Caminho04 caminho04 = new Caminho04();
-      // 	pontos += caminho04.iniciar();
-      // 	break;
       default:
         System.out.println("Saindo...");
         break;
@@ -140,8 +136,15 @@ public class _Principal {
     return pontos;
   }
 
-  public static void caminho05(int pontos) {
-    System.out.println("Você chegou ao fim do jogo!");
-    System.out.println("Você conseguiu " + pontos + " moedas!");
+  public static void caminho04(int pontos) {
+    if (pontos > 0) {
+      System.out.println(
+        "Você foi misericordioso e conseguiu salvar " +
+        pontos +
+        " almas!"
+      );
+    } else {
+      System.out.println("Você não conseguiu salvar ninguém!");
+    }
   }
 }
