@@ -144,7 +144,7 @@ public class _Principal {
         " almas!"
       );
     } else {
-      System.out.println("Você não conseguiu salvar ninguém!");
+      System.out.println("Você não conseguiu salvar ninguém... Quem sabe da proxima?");
     }
   }
 }
