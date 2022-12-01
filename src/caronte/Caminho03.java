@@ -19,7 +19,7 @@ public class Caminho03 {
 		Random rand = new Random();
 		int jogadaPC =0;
 		int jogadaPL=0;
-		boolean vitoria = false;
+		
 			
 		Scanner lolo = new Scanner(System.in);
 		
@@ -59,6 +59,7 @@ public class Caminho03 {
 			_Principal.temporizador(3, false);
 			loop = false;
 			}
+			
 
 		if (jogo2 == true) {
 			System.out.println("Te darei uma chance. Me desafie para um jogo, se voce ganhar, te darei a moeda necessaria para a viagem. Mas voce só tera uma chance.");
@@ -68,6 +69,7 @@ public class Caminho03 {
 			System.out.println("O unico jogo em que sei jogar é par ou impar... Pode ser?");
 			System.out.println("Claro... nesse caso eu escolho:");
 			System.out.println("eu escolho... [1] - PAR [2]- IMPAR");
+			boolean vitoria = false;
 			jogadaPL = lolo.nextInt();
 			//1= par 2= impar
 			if(jogadaPL == 1){
@@ -91,14 +93,15 @@ public class Caminho03 {
 				vitoria = false;
 				
 			}
-		}
-			if(vitoria){
+		
+			if(vitoria == true){
 				System.out.println("Tenho que me despedir... Adeus...");
 				System.out.println("NAO POR FAVOR!!!");
 				System.out.println(" -'Enquanto voce vai embora com seu barco, voce escuta o choro da mulher cada vez mais distante'- ");
 				_Principal.temporizador(5, false);
 				loop = false;
 				break;
+
 
 			}else if(vitoria == false){
 				System.out.println("Serio?? Vou poder ver minha familia novamente! Faz tanto tempo...");
@@ -110,8 +113,10 @@ public class Caminho03 {
 				moeda = 1;
 				break;
 			}
+		}
 		}while(loop);
 		return moeda;
 	}
+	
 	
 }
